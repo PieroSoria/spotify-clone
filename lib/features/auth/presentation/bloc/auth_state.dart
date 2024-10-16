@@ -9,15 +9,19 @@ enum AuthStatus {
 }
 
 class AuthState extends Equatable {
+  final bool? isremember;
   final AuthStatus? status;
-  const AuthState({this.status});
+  const AuthState({this.isremember, this.status});
 
-  factory AuthState.initialState() => const AuthState();
+  factory AuthState.initialState() => const AuthState(isremember: false);
 
-  AuthState copyWith({AuthStatus? status}) {
-    return AuthState(status: status ?? this.status);
+  AuthState copyWith({bool? isremember, AuthStatus? status}) {
+    return AuthState(
+      isremember: isremember ?? this.isremember,
+      status: status ?? this.status,
+    );
   }
 
   @override
-  List<Object?> get props => [status];
+  List<Object?> get props => [status, isremember];
 }

@@ -26,6 +26,9 @@ class MyApp extends StatelessWidget {
         BlocProvider<ThemesBloc>(
           create: (context) => sl(),
         ),
+        BlocProvider<AuthBloc>(
+          create: (context) => sl(),
+        ),
       ],
       child: Builder(builder: (context) {
         return BlocBuilder<RouteBloc, RouteState>(

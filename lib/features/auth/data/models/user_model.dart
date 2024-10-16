@@ -26,8 +26,8 @@ class UserModel extends UserEntity {
       email: json['email'],
       password: json['password'],
       photoUrl: json['photoUrl'],
-      createdAt: json['createdAt'],
-      updatedAt: json['updatedAt'],
+      createdAt: json['created_at'],
+      updatedAt: json['updated_at'],
     );
   }
 
@@ -38,7 +38,7 @@ class UserModel extends UserEntity {
         'email': email,
         'password': password,
         'photoUrl': photoUrl,
-        'created_at': createAt,
+        'created_at': createdAt,
         'updated_at': updatedAt,
       };
 }

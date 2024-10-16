@@ -4,9 +4,20 @@ abstract class AuthEvent extends Equatable {
   factory AuthEvent.onloginAuth(
           {required String email, required String password}) =>
       _OnloginAuth(email: email, password: password);
+  factory AuthEvent.onChangeRemember() => _OnChangeRemember();
 
   @override
   List<Object?> get props => [];
+}
+
+class _OnChangeRemember implements AuthEvent {
+  @override
+  // TODO: implement props
+  List<Object?> get props => throw UnimplementedError();
+
+  @override
+  // TODO: implement stringify
+  bool? get stringify => throw UnimplementedError();
 }
 
 class _OnloginAuth implements AuthEvent {

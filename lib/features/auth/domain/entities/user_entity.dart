@@ -5,7 +5,7 @@ class UserEntity {
   String? email;
   String? password;
   String? photoUrl;
-  DateTime? createAt;
+  DateTime? createdAt;
   DateTime? updatedAt;
 
   UserEntity({
@@ -15,7 +15,7 @@ class UserEntity {
     this.email,
     this.password,
     this.photoUrl,
-    this.createAt,
+    this.createdAt,
     this.updatedAt,
   });
 }
